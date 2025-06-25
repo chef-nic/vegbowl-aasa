@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "B7GZG58T32.com.3StepChef.VegBowl",
+        "paths": [ "/shared-bowl/*" ]
+      }
+    ]
+  }
+}
