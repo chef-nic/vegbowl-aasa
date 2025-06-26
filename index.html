@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Accept your shared VegBowl</title>
-  
-  <!-- Add inside <head>, before <style> -->
-<meta property="og:type"        content="website">
-<meta property="og:url"         content="https://links.vegbowl.app/shared-bowl/{{RECORD_ID}}">
-<meta property="og:title"       content="Someone shared a VegBowl with you!">
-<meta property="og:description" content="Install VegBowl to view, edit, and save protein-packed bowls.">
-<meta property="og:image"       content="https://links.vegbowl.app/logo.png">
 
-<meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:title"       content="Someone shared a VegBowl with you!">
-<meta name="twitter:description" content="Install VegBowl then tap the link again to accept.">
-<meta name="twitter:image"       content="https://links.vegbowl.app/logo.png">
+  <!-- Open Graph / Twitter tags … (unchanged) -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://links.vegbowl.app/shared-bowl/{{RECORD_ID}}">
+  <meta property="og:title"       content="Someone shared a VegBowl with you!">
+  <meta property="og:description" content="Install VegBowl to view, edit, and save protein-packed bowls.">
+  <meta property="og:image"       content="https://links.vegbowl.app/logo.png">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Someone shared a VegBowl with you!">
+  <meta name="twitter:description" content="Install VegBowl then tap the link again to accept.">
+  <meta name="twitter:image"       content="https://links.vegbowl.app/logo.png">
 
   <style>
     :root { font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -28,18 +28,23 @@
       height: 100vh;
       margin: 0;
       padding: 1rem;
-      background: linear-gradient(135deg, #8fcbe9, #1976d2);
+      background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
       color: #fff;
     }
     h1 {
       font-size: 2rem;
       margin: 0.5rem 0;
     }
-    p {
+
+    /* NEW: style for the step paragraphs */
+    .step {
       max-width: 420px;
       line-height: 1.4;
-      margin: 0.5rem 0 1.5rem;
+      margin: 0.75rem 0 1.5rem;
+      font-size: 1.15rem;      /* a little bigger */
+      font-weight: 600;        /* semi-bold */
     }
+
     a img {
       width: 245px;
       height: 82px;
@@ -50,15 +55,14 @@
 <body>
   <h1>Someone shared a bowl with you! 🥗</h1>
 
-  <p>Step 1: Install VegBowl using the button below.</p>
+  <p class="step"><strong>Step&nbsp;1:</strong> Install VegBowl using the button below.</p>
 
   <a href="https://apps.apple.com/us/app/vegbowl/id6746657736?itscg=30200&itsct=apps_box_badge&mttnsubad=6746657736">
     <img
       src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1749513600"
-      alt="Download on the App Store"
-    >
+      alt="Download on the App Store">
   </a>
 
-  <p>Step 2: Return to your messages and tap the same link again to accept the bowl.</p>
+  <p class="step"><strong>Step&nbsp;2:</strong> Return to your messages and tap the shared link to accept the bowl.</p>
 </body>
 </html>
