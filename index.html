@@ -2,16 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Change the content URL to your actual App Store link -->
-  <meta http-equiv="refresh"
-        content="0; url='https://apps.apple.com/us/app/vegbowl/id6746657736?itscg=30200&itsct=apps_box_link&mttnsubad=6746657736'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VegBowl iOS App</title>
+  <!-- Delay redirect by 3 seconds to let users read the message -->
+  <meta http-equiv="refresh" content="3; url='https://apps.apple.com/us/app/vegbowl/id6746657736?itscg=30200&itsct=apps_box_link&mttnsubad=6746657736'">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #8fcbe9, #1976d2);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    p {
+      margin: 0.5rem 0 1rem;
+      line-height: 1.4;
+    }
+    a.button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #fff;
+      color: #1976d2;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <p>
-    Opening the App Store…<br>
-    If you’re not redirected, <a href="https://apps.apple.com/us/app/vegbowl/id6746657736?itscg=30200&itsct=apps_box_link&mttnsubad=6746657736">
-    click here</a>.
-  </p>
+  <h1>VegBowl is loading…</h1>
+  <p>Redirecting you to the App Store.<br>If you’re not redirected in a few seconds,</p>
+  <a class="button" href="https://apps.apple.com/us/app/vegbowl/id6746657736?itscg=30200&itsct=apps_box_link&mttnsubad=6746657736">
+    Download VegBowl
+  </a>
 </body>
 </html>
