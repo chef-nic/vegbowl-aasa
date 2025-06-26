@@ -3,44 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Open your bowl in VegBowl</title>
+  <title>Accept your shared VegBowl</title>
+  
+  <!-- Add inside <head>, before <style> -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://links.vegbowl.app/shared-bowl/{{RECORD_ID}}">
+<meta property="og:title"       content="Someone shared a VegBowl with you!">
+<meta property="og:description" content="Install VegBowl to view, edit, and save protein-packed bowls.">
+<meta property="og:image"       content="https://links.vegbowl.app/logo.png">
 
-  <!-- Smart App Banner (record-ID injected by JS) -->
-  <script>
-    const recordID = location.pathname.split('/').pop();
-    const deepLink = `https://links.vegbowl.app/shared-bowl/${recordID}`;
-    const meta = document.createElement('meta');
-    meta.name = 'apple-itunes-app';
-    meta.content = `app-id=6746657736, app-argument=${deepLink}`;
-    document.head.appendChild(meta);
-  </script>
-
-  <!-- Gentle auto-redirect after 3 s -->
-  <meta http-equiv="refresh"
-        content="3;url=https://apps.apple.com/us/app/vegbowl/id6746657736">
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Someone shared a VegBowl with you!">
+<meta name="twitter:description" content="Install VegBowl then tap the link again to accept.">
+<meta name="twitter:image"       content="https://links.vegbowl.app/logo.png">
 
   <style>
-    :root { font-family:-apple-system, BlinkMacSystemFont, sans-serif; }
-    body  { display:flex;flex-direction:column;align-items:center;
-            justify-content:center;height:100vh;margin:0;
-            text-align:center;background:linear-gradient(135deg,#8fcbe9,#1976d2);
-            color:#fff;padding:1rem;}
-    h1   { font-size:2rem;margin:.5rem 0;}
-    a.btn{padding:.75rem 1.5rem;border-radius:.5rem;font-weight:600;
-          background:#fff;color:#1976d2;text-decoration:none;}
+    :root { font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      background: linear-gradient(135deg, #8fcbe9, #1976d2);
+      color: #fff;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+    p {
+      max-width: 420px;
+      line-height: 1.4;
+      margin: 0.5rem 0 1.5rem;
+    }
+    a img {
+      width: 245px;
+      height: 82px;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body>
-  <h1>Your bowl is ready 🥗</h1>
-  <p>Get VegBowl to open it.<br>
-     After install, just tap this link again.</p>
-  <a class="btn"
-     href="https://apps.apple.com/us/app/vegbowl/id6746657736">
-     Download VegBowl free
+  <h1>Someone shared a bowl with you! 🥗</h1>
+
+  <p>Step 1: Install VegBowl using the button below.</p>
+
+  <a href="https://apps.apple.com/us/app/vegbowl/id6746657736?itscg=30200&itsct=apps_box_badge&mttnsubad=6746657736">
+    <img
+      src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1749513600"
+      alt="Download on the App Store"
+    >
   </a>
-  <p style="margin-top:1.5rem;font-size:.85rem;opacity:.8;">
-     Already installed? <a href="#" style="color:#fff;text-decoration:underline;"
-       onclick="location.href=deepLink;return false;">Open in VegBowl</a>
-  </p>
+
+  <p>Step 2: Return to your messages and tap the same link again to accept the bowl.</p>
 </body>
 </html>
